@@ -28,6 +28,8 @@ Download and deploy:
 Update your java applications JAVAOPTS to switch on GC Logging. 
 
 	-Xloggc:app0gc.log -XX:+UseGCLogFileRotation  -XX:GCLogFileSize=1M 
+	-XX:NumberOfGCLogFiles=1000 -XX:GCLogFileSize=1M
+	 -verbose:gc  -XX:+PrintGCTimeStamps -XX:+PrintGCDateStamps
 
 Create a datasource for your gc logs e.g 
 
