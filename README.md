@@ -27,9 +27,12 @@ Download and deploy:
 
 Update your java applications JAVAOPTS to switch on GC Logging. 
 
+	-Xloggc:app0gc.log -XX:+UseGCLogFileRotation  -XX:GCLogFileSize=1M 
+
+Create a datasource for your gc logs e.g 
+
 	tomcat-gc 
 
-Create a datasource for your gc logs 
 
 ## JMX Monitoring 
 
