@@ -23,7 +23,7 @@ Download and deploy:
 	tomcat-uat
 	tomcat-prod
 
-### Garbage Collection logging
+## Garbage Collection logging
 
 Update your java applications JAVAOPTS to switch on GC Logging. 
 
