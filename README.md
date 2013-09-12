@@ -51,7 +51,7 @@ You can define as many groups as you like in the overrides file. Once you have f
 
 ## Agent Type
 
-The JavaApp by default will run on any Indexer named JmxIndexer or any agent that contains the name JmxIndexer. The following are names are valid
+The JavaApp by default will run on any Indexer named JmxIndexer or any agent that contains the name JmxIndexer. The following names are examples that fit this pattern
 
  * JmxIndexer
  * DevJmxIndexer
@@ -85,6 +85,8 @@ XXX is the name of your Indexer,Indexerstore or Forwarder.  Here are a few examp
 
 
 
+# Log4j logs 
 
+ ![](docs/images/ws-log4j.png) 
 
 
