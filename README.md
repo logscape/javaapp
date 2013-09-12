@@ -56,7 +56,7 @@ The JavaApp by default will run on any Indexer named JmxIndexer.
 
 # Overview 
 
- ![](docs/images/home.png) 
+ ![](docs/images/ws-home.png) 
 
 
 # Heap and Memory Pools 
