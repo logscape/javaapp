@@ -51,7 +51,27 @@ You can define as many groups as you like in the overrides file. Once you have f
 
 ## Agent Type
 
-The JavaApp by default will run on any Indexer named JmxIndexer. 
+The JavaApp by default will run on any Indexer named JmxIndexer or any agent that contains the name JmxIndexer. The following are names are valid
+
+ * JmxIndexer
+ * DevJmxIndexer
+ * UatJmxIndexer 
+ * PRODJmxIndexer 
+
+You can make this App run on any Indexer,Indexstore or Forwarder of your choice by adding the following line to your overrides file
+
+ bundle.defaults.resourceSelection=type contains XXX
+
+XXX is the name of your Indexer,Indexerstore or Forwarder.  Here are a few examples
+	
+	JbossIndexer
+	J2EEForwarder
+	TraderServerIndexStore 
+
+
+
+
+
 
 
 # Overview 
