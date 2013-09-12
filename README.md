@@ -1,6 +1,6 @@
 # JavaApp-1.0
 
-Monitor Java based applications such as Tomcat, JBoss, ActiveMQ via jmx. Provides charts and alerts on Heap Memory allocation,GC Activity and log4j logs 
+Monitor Java based applications such as Tomcat, JBoss, ActiveMQ via jmx. Provides charts and alerts on Heap Memory allocation,GC Activity and log4j logs. Provides extensive monitoring and logging for PROD and devops environments
 
 
 # Downloads 
@@ -63,7 +63,7 @@ The JavaApp by default will run on any Indexer named JmxIndexer or any agent tha
 
 You can make this App run on any Indexer,Indexstore or Forwarder of your choice by adding the following line to your overrides file
 
- bundle.defaults.resourceSelection=type contains XXX
+	bundle.defaults.resourceSelection=type contains XXX
 
 XXX is the name of your Indexer,Indexerstore or Forwarder.  Here are a few examples
 	
