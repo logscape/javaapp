@@ -31,6 +31,17 @@ Update your java applications JAVAOPTS to switch on GC Logging.
 	-XX:NumberOfGCLogFiles=1000 -XX:GCLogFileSize=1M
 	 -verbose:gc  -XX:+PrintGCTimeStamps -XX:+PrintGCDateStamps
 
+Use the following filename for your gc logs
+
+	{application}-{label}-gc.log
+
+A few examples:
+
+	logscape-qaenv-gc.log
+	tomcat-uat-gc.log
+	tradeserver-ratesprod-gc.log 
+
+
 Create a datasource for your gc logs e.g 
 
 	tomcat-gc 
