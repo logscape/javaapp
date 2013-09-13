@@ -106,3 +106,5 @@ XXX is the name of your Indexer,Indexerstore or Forwarder.  Here are a few examp
  ![](docs/images/ws-log4j.png) 
 
 
+# GC Logs
+ ![](docs/images/ws-gclogs.png)
