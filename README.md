@@ -6,8 +6,8 @@ Monitor Java based applications such as Tomcat, JBoss, ActiveMQ via jmx. Provide
 # Downloads 
 
 Read [How to deploy](http://logscape.github.io/deploy.html) for basic App installation instructions  
-Read [How to import data](http://logscape.github.io/ds-add.html) to learn about data sources
-Read [Jmx Monitoring Overrides](overrides.md) to see some examples
+Read [How to import data](http://logscape.github.io/ds-add.html) to learn about data sources  
+Read [Jmx Monitoring Overrides](https://github.com/logscape/javaapp/blob/master/overrides.md#overrides) to see some examples
 
 Download and deploy:  
 
