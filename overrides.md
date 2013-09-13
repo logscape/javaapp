@@ -26,7 +26,7 @@ This configuration will find all java processes within the port ranges and colle
 ##  Uncommon JMX Url syntaxes 
 
 
-	*.group0.jmxUrls=service:jmx:rmi://10.28.1.164:16331/jndi/rmi://10.28.1.164:16332/server;service:jmx:rmi://10.28.1.165:16331/jndi/rmi://10.28.1.165:16332/server
+	*.group0.jmxUrls=service:jmx:rmi://10.28.1.164:16331/jndi/rmi://10.28.1.164:16332/server;service:jmx:rmi://10.28.1.165:16331/jndi/rmi://10.28.1.165:16332/server  
 	*.grouo0.label=Coherence
 
 using the custom jboss JMX Url syntax 
