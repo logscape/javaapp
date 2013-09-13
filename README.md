@@ -7,6 +7,7 @@ Monitor Java based applications such as Tomcat, JBoss, ActiveMQ via jmx. Provide
 
 Read [How to deploy](http://logscape.github.io/deploy.html) for basic App installation instructions  
 Read [How to import data](http://logscape.github.io/ds-add.html) to learn about data sources
+Read [Jmx Monitoring Overrides](overrides.md) to see some examples
 
 Download and deploy:  
 
@@ -14,6 +15,7 @@ Download and deploy:
  *  [JavaApp-1.0-overrides.properties](https://github.com/logscape/javaapp/blob/master/dist/JavaApp-1.0-override.properties)
 
 # Installation 
+
 
 ## Log4J 
 
@@ -49,7 +51,7 @@ Create a datasource for your gc logs e.g
 
 ## JMX Monitoring 
 
- Configure your environment using the application override file. It is required for JMX  statistics.
+Configure your environment using the application override file. It is required for JMX  statistics.
 Here's an example application override monitoring 3 Logscape agents. 
 
 	*.group0.host=10.28.1.160,10.28.1.150,10.28.1.155
