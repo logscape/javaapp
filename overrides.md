@@ -23,8 +23,9 @@ It is common for multiple java processes to use ports witin a port range
 This configuration will find all java processes within the port ranges and collect jmx data
 
 
-##  Uncommon JMX Url syntaxes 
+##  Other Jmx Url types
 
+You can use hardcoded urls if your application use jmx syntax similar to these. 
 
 	*.group0.jmxUrls=service:jmx:rmi://10.28.1.164:16331/jndi/rmi://10.28.1.164:16332/server;service:jmx:rmi://10.28.1.165:16331/jndi/rmi://10.28.1.165:16332/server  
 	*.grouo0.label=Coherence
