@@ -1,6 +1,7 @@
 # Overrides
 
-The JavaApp can monitor JMX enabled applications in different scenarios. Here are a few examples: 
+The JavaApp can monitor JMX enabled applications in different scenarios. In most cases all you will have to do is provide a host and a port and the JavaApp will do the rest.    
+Here are a few examples: 
 
 
 
@@ -24,7 +25,8 @@ This configuration will find all java processes within the port ranges and colle
 
 ##  Uncommon JMX Url syntaxes 
 
-	*.group0.jmxUrls=  coherence urls 
+
+	*.group0.jmxUrls=service:jmx:rmi://10.28.1.164:16331/jndi/rmi://10.28.1.164:16332/server;service:jmx:rmi://10.28.1.165:16331/jndi/rmi://10.28.1.165:16332/server
 	*.grouo0.label=Coherence
 
 using the custom jboss JMX Url syntax 
