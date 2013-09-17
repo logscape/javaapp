@@ -12,14 +12,14 @@ Read [Jmx Monitoring Overrides](https://github.com/logscape/javaapp/blob/master/
 Download and deploy:  
 
  *  [JavaApp-1.0.zip](https://github.com/logscape/javaapp/blob/master/dist/JavaApp-1.0.zip?raw=true)  
- *  [JavaApp-1.0-overrides.properties](https://github.com/logscape/javaapp/blob/master/dist/JavaApp-1.0-override.properties)
+ *  [JavaApp-1.0-overrides.properties](https://github.com/logscape/javaapp/blob/master/dist/JavaApp-1.0-override.properties)  (Example Overrides file) 
 
 # Installation 
 
 
 ## Log4J 
 
- Create a datasource for each applicaiton you would like to monitor. Naming datasources according to application and environment help in organising your searches. For example, a system administrator may be in charge of tomcat servers in DEV,UAT and PROD environments; he may choose his datasources
+ Create a datasource for each applicaiton you would like to monitor. Naming datasources according to application and environment to help in organising your searches. For example, a system administrator may be in charge of tomcat servers in DEV,UAT and PROD environments; he may choose his datasources
 
 	tomcat-dev
 	tomcat-uat
@@ -27,9 +27,9 @@ Download and deploy:
 
 ## Garbage Collection logging
 
-Update your java applications JAVAOPTS to switch on GC Logging. 
+Update your java application's JAVAOPTS to switch on GC Logging. 
 
-	-Xloggc:app0gc.log -XX:+UseGCLogFileRotation  -XX:GCLogFileSize=1M 
+	-Xloggc:app0gc.log -XX:+UseGCLogFileRotation  -XX:GCLogFileSize=100M 
 	-XX:NumberOfGCLogFiles=1000 -XX:GCLogFileSize=1M
 	 -verbose:gc  -XX:+PrintGCTimeStamps -XX:+PrintGCDateStamps
 
@@ -51,14 +51,14 @@ Create a datasource for your gc logs e.g
 
 ## JMX Monitoring 
 
-Configure your environment using the application override file. It is required for JMX  statistics.
+Configure your environment using the application override file. It is required for the JMX  statistics. 
 Here's an example application override monitoring 3 Logscape agents. 
 
 	*.group0.host=10.28.1.160,10.28.1.150,10.28.1.155
 	*.group0.ports8989
 	*.grouo0.label=logscape
 
-The above configuration will connect to each host on port 8989 and collect JMX data. The jmx data from this host will contain a label 'logscape'. The label is used to describe a group of similar applictions. In this case they happen to be Logscape agents. My next group of java processes are all tomcat. 
+The above configuration will connect to each host on port 8989 and collect JMX data. The jmx data from this host will contain a label 'logscape'. The label is used to describe a group of similar applictions. In this case they happen to be Logscape Indexers. My next group of applications are all tomcat servers. 
 
 	*.group1.host=10.28.1.170,10.28.1.171
 	*.group1.ports=9010
@@ -69,23 +69,32 @@ You can define as many groups as you like in the overrides file. Once you have f
 
 ## Agent Type
 
-The JavaApp by default will run on any Indexer named JmxIndexer or any agent that contains the name JmxIndexer. The following names are examples that fit this pattern
+The JavaApp by default will run on any Indexer named JmxIndexer or any agent that contains the text 'Jmx' . The following names are examples that fit this pattern
 
  * JmxIndexer
  * DevJmxIndexer
  * UatJmxIndexer 
  * PRODJmxIndexer 
 
-You can make this App run on any Indexer,Indexstore or Forwarder of your choice by adding the following line to your overrides file
+You can override this by adding the following line to your overrides properties file
 
 	bundle.defaults.resourceSelection=type contains XXX
 
-XXX is the name of your Indexer,Indexerstore or Forwarder.  Here are a few examples
-	
-	JbossIndexer
-	J2EEForwarder
-	TraderServerIndexStore 
+XXX can be the name of the agent you want it to run on.
 
+	bundle.defaults.resourceSelection=type contains TradeServerIndexer 
+
+if you want to match a group of agents you can do something like the following
+
+
+	bundle.defaults.resourceSelection=type contains  DS0
+	
+This example will run the JavaApp only on the following agents. 
+
+	DS0Indexer
+	UKDC0IndexStore
+	EUDC1IndexStore
+	JPDC1IndexStore
 
 
 

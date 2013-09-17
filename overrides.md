@@ -16,12 +16,12 @@ Here are a few examples:
 
 ## Indexer monitoring multiple local java processes
 
-It is common for multiple java processes to use ports witin a port range 
+Some java applications may run multiple processes on a single host with each exposing jmx within a predifined port range. The example below will discover all jmx ports in the ranges 9010-9090 and 10000-11000. 
 
 	*.group0.ports=9010-9090,10000-11000
 	*.group0.label=DataSynapseEngines
 
-This configuration will find all java processes within the port ranges and collect jmx data
+There is no need to explicitely list all the ports if the process being monitored is on the same host as an Indexer of Forwarder
 
 ## Group your applications
 
