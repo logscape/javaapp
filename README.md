@@ -16,7 +16,11 @@ Download and deploy:
 
 # Installation 
 
-The JavaApp is configured to run on any agent containing the text Jmx ( e.g JmxIndexer ). See [editing boot.properties](http://www.google.com) on how to change the Agent type.
+The JavaApp is configured to run on any agent containing the text Jmx ( e.g JmxIndexer ). To change the name of an Indexer update the boot.properties file in the $LOGSCAPE\_HOME folder. 
+Update the following property to change the name of your Indexer.
+
+	 -Dvso.resource.type=Indexer  ( could also be IndexStore or Forwarder ) 
+
 If you want to run the JavaApp on the Manager update your overrides properties file.  See [below](https://github.com/logscape/javaapp#agent-type) for details 
 
 ## Log4J 
