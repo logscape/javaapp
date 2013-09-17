@@ -16,6 +16,8 @@ Download and deploy:
 
 # Installation 
 
+The JavaApp is configured to run on any agent containing the text Jmx ( e.g JmxIndexer ). See [editing boot.properties](http://www.google.com) on how to change the Agent type.
+If you want to run the JavaApp on the Manager update your overrides properties file.  See [below](https://github.com/logscape/javaapp#agent-type) for details 
 
 ## Log4J 
 
@@ -97,7 +99,10 @@ This example will run the JavaApp only on the following agents.
 	JPDC1IndexStore
 
 
+An example which runs the JavaApp on the Manager 
 
+
+	bundle.defaults.resourceSelection=type contains Manager 
 
 
 
