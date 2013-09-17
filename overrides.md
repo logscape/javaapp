@@ -5,6 +5,7 @@ Here are a few examples:
 
 
 
+
 ## Indexer monitoring multiple remote hosts
 
 
@@ -22,6 +23,10 @@ It is common for multiple java processes to use ports witin a port range
 
 This configuration will find all java processes within the port ranges and collect jmx data
 
+## Group your applications
+
+
+
 
 ##  Other Jmx Url types
 
@@ -32,9 +37,6 @@ You can use hardcoded urls if your application use jmx syntax similar to these.
 
 using the custom jboss JMX Url syntax 
 
-	*.group1.jmxUrls=jboss blah blah
-	*.group1.label=JBOSSAS
+	*.group1.jmxUrls=service:jmx:remoting-jmx://localhost:9010
+	*.group1.label=JBOSS_AS7
 
-
-
-## Grouping you applications 
