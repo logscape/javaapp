@@ -12,6 +12,7 @@ Read [Jmx Monitoring Overrides](https://github.com/logscape/javaapp/blob/master/
 Download and deploy:  
 
  *  [JavaApp-1.0.zip](https://github.com/logscape/javaapp/blob/master/dist/JavaApp-1.0.zip?raw=true)  
+Optional: 
  *  [JavaApp-1.0-overrides.properties](https://github.com/logscape/javaapp/blob/master/dist/JavaApp-1.0-override.properties)  (Example Overrides file) 
 
 # Installation 
